@@ -556,9 +556,36 @@ button:disabled { cursor: not-allowed; opacity: .63; }
 .toast { border-color: #d4d8ce; border-radius: 4px; color: #34452e; box-shadow: 0 4px 14px rgba(35, 38, 32, .1); animation: none; }
 button, input { transition: none !important; }
 button:focus-visible, input:focus-visible { outline: 3px solid rgba(70, 83, 63, .35); outline-offset: 2px; }
+.seller-input { width: min(100%, 420px); margin-top: 16px; }
+.seller-cell { color: #383d36 !important; font-weight: 600; }
+.paper-seller { display: flex; min-width: 110px; flex-direction: column; gap: 5px; }
+.paper-seller b { color: #30362e; font-size: 13px; }
+.table-card { overflow-x: auto; }
+.invoice-edit-form { display: grid; gap: 17px; padding: 25px; }
+.edit-invoice-note { margin: -8px 0 0; color: #555b52; font-size: 13px; line-height: 1.5; }
+.edit-invoice-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.edit-invoice-fields label { display: block; color: #454b43; font-size: 14px; font-weight: 600; }
+.edit-invoice-fields input { width: 100%; height: 46px; margin-top: 7px; padding: 0 11px; border: 1px solid #b9b8ae; border-radius: 4px; background: #fff; color: #30362e; font-size: 15px; }
+.edit-invoice-fields input:focus { border-color: #46533f; outline: 3px solid rgba(70, 83, 63, .14); }
+.edit-invoice-fields .input-with-status svg { top: 21px; right: 11px; }
+.edit-products { padding: 17px; border: 1px solid #dedbd1; border-radius: 4px; }
+.edit-products .card-title-row { margin-bottom: 12px; }
+.edit-products .card-title-row h2 { margin: 0; color: #30362e; font-size: 16px; }
+.edit-products .card-title-row p { margin: 5px 0 0; color: #62675f; font-size: 12px; }
+.edit-invoice-summary { display: grid; gap: 9px; justify-self: end; width: min(100%, 320px); }
+.edit-invoice-summary div { display: flex; justify-content: space-between; gap: 15px; color: #454b43; font-size: 13px; }
+.edit-invoice-summary b { color: #30362e; }
+.edit-invoice-summary .edit-grand-total { padding-top: 10px; border-top: 1px solid #dedbd1; font-weight: 700; }
+.edit-grand-total strong { color: #30362e; font-size: 18px; }
 
 @media (max-width: 560px) {
   .page-heading h1, .dashboard-heading h1 { font-size: 26px; }
   .stats-grid { gap: 8px; }
   .stat-card { border-radius: 4px; }
+  .seller-input { width: 100%; }
+  .invoice-list-table th:nth-child(4), .invoice-list-table td:nth-child(4) { display: none; }
+  .invoice-list-table th:nth-child(5), .invoice-list-table td:nth-child(5) { display: none; }
+  .edit-invoice-form { padding: 17px; }
+  .edit-invoice-fields { grid-template-columns: 1fr; }
+  .edit-products { padding: 11px; }
 }

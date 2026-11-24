@@ -17,6 +17,7 @@ const invoiceSchema = new mongoose.Schema({
     area: { type: String, required: true },
     contactNumber: { type: String, default: '' }
   },
+  sellerName: { type: String, required: true, trim: true, maxlength: 120 },
   products: { type: [invoiceLineSchema], required: true, validate: (lines) => lines.length > 0 },
   subtotal: { type: Number, required: true },
   discountPercentage: { type: Number, required: true },
